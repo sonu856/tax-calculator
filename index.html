@@ -14,27 +14,20 @@
       <div class="mb-3">
         <label for="gross-annual-income" class="form-label">Enter Gross Annual Income <span class="info-icon" title="Gross annual income is your total salary in a year before any deductions."><i class="bi bi-question-circle"></i></span></label>
         <div class="input-group">
-          <input type="text" class="form-control" id="gross-annual-income" placeholder="Enter your gross annual income">
-          <div class="input-group-text tooltip-icon">
-            <span class="info-icon" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
-          </div>
-          <div class="invalid-feedback d-none">
-            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
-          </div>
+          <input type="text" class="form-control" id="gross-annual-income" placeholder="Enter your gross annual income" aria-describedby="income-addon">
+          <span class="input-group-text" id="income-addon">
+            <i class="bi bi-exclamation-circle info-icon" title="Please Enter Numbers Only"></i>
+          </span>
         </div>
       </div>
       <div class="mb-3">
         <label for="extra-income" class="form-label">Extra Income <span class="info-icon" title="Enter any additional income you have from other sources."><i class="bi bi-question-circle"></i></span></label>
         <div class="input-group">
           <input type="text" class="form-control" id="extra-income" placeholder="Enter your extra income">
-          <div class="input-group-text tooltip-icon">
-            <span class="info-icon" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
-          </div>
-          <div class="invalid-feedback d-none">
-            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
-          </div>
+          <span class="input-group-text tooltip-icon"><i class="bi-exclamation-circle info-icon" title="Please Enter Numbers Only"></i></span>
         </div>
       </div>
+      
       <div class="mb-3">
         <label for="age-group" class="form-label">Age Group <span class="info-icon" title="Select your age group to determine the appropriate tax rate."><i class="bi bi-question-circle"></i></span></label>
         <div class="input-group">
@@ -44,20 +37,15 @@
             <option value="40-60">40 - 60</option>
             <option value="over-60">60 and above</option>
           </select>
-          <div class="invalid-feedback d-none">
-            <span class="invalid-feedback-text" title="Please select your age group."><i class="bi bi-exclamation-circle text-danger"></i></span>
-          </div>
+          <span class="input-group-text tooltip-icon"><i class="bi-exclamation-circle info-icon" title="Please select your age group."></i></span>
         </div>
       </div>
+
       <div class="mb-3">
         <label for="total-deductions" class="form-label">Total Applicable Deductions <span class="info-icon" title="Enter the total amount of applicable deductions you have."><i class="bi bi-question-circle"></i></span></label>
         <div class="input-group">
           <input type="text" class="form-control" id="total-deductions" placeholder="Enter your total applicable deductions">
-          <span class="input-group-text" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
-          <div class="invalid-feedback d-none">
-            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
-          </div>
-
+          <span class="input-group-text tooltip-icon"><i class="bi-exclamation-circle info-icon" title="Please Enter Numbers Only"></i></span>
         </div>
       </div>
       <div class="text-center">

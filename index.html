@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Tax Calculator</h1>
+    <form id="tax-calculator-form">
+      <div class="mb-3">
+        <label for="gross-annual-income" class="form-label">Enter Gross Annual Income <span class="info-icon" title="Gross annual income is your total salary in a year before any deductions."><i class="bi bi-question-circle"></i></span></label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="gross-annual-income" placeholder="Enter your gross annual income">
+          <div class="input-group-text tooltip-icon">
+            <span class="info-icon" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
+          </div>
+          <div class="invalid-feedback d-none">
+            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="extra-income" class="form-label">Extra Income <span class="info-icon" title="Enter any additional income you have from other sources."><i class="bi bi-question-circle"></i></span></label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="extra-income" placeholder="Enter your extra income">
+          <div class="input-group-text tooltip-icon">
+            <span class="info-icon" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
+          </div>
+          <div class="invalid-feedback d-none">
+            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="age-group" class="form-label">Age Group <span class="info-icon" title="Select your age group to determine the appropriate tax rate."><i class="bi bi-question-circle"></i></span></label>
+        <div class="input-group">
+          <select class="form-select" id="age-group">
+            <option value="">Select your age group</option>
+            <option value="under-40">Under 40</option>
+            <option value="40-60">40 - 60</option>
+            <option value="over-60">60 and above</option>
+          </select>
+          <div class="invalid-feedback d-none">
+            <span class="invalid-feedback-text" title="Please select your age group."><i class="bi bi-exclamation-circle text-danger"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="total-deductions" class="form-label">Total Applicable Deductions <span class="info-icon" title="Enter the total amount of applicable deductions you have."><i class="bi bi-question-circle"></i></span></label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="total-deductions" placeholder="Enter your total applicable deductions">
+          <span class="input-group-text" title="Please Enter Numbers Only"><i class="bi-exclamation-circle"></i></span>
+          <div class="invalid-feedback d-none">
+            <span class="invalid-feedback-text" title="Please enter a valid number."><i class="bi bi-exclamation-circle text-danger"></i></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" id="submit-btn">Calculate Tax</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal for displaying results -->
+  <div class="modal fade" id="tax-result-modal" tabindex="-1" aria-labelledby="tax-result-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tax-result-modal-label">Tax Calculation Result</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="overall-income"></p>
+          <p id="tax-amount"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
